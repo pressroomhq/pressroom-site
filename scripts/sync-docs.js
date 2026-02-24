@@ -118,9 +118,8 @@ function collectFiles(dir, folder = '') {
 
 // Main
 if (!existsSync(DOCS_REPO)) {
-  console.error(`Docs repo not found at ${DOCS_REPO}`)
-  console.error('Usage: node scripts/sync-docs.js [path-to-docs-repo]')
-  process.exit(1)
+  console.warn(`Docs repo not found at ${DOCS_REPO} — skipping sync`)
+  process.exit(0)
 }
 
 // Clean and recreate output dir
