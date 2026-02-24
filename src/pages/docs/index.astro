@@ -1,0 +1,43 @@
+---
+import DocsPage from '../../layouts/DocsPage.astro'
+import { getCollection } from 'astro:content'
+
+const allDocs = await getCollection('docs')
+
+const sections: Record<string, typeof allDocs> = {}
+for (const doc of allDocs) {
+  const section = doc.data.section
+  if (!sections[section]) sections[section] = []
+  sections[section].push(doc)
+}
+for (const section of Object.keys(sections)) {
+  sections[section].sort((a, b) => a.data.order - b.data.order)
+}
+const sectionNames = Object.keys(sections).sort()
+---
+
+<DocsPage title="Documentation" description="Pressroom HQ documentation. Guides for setup, configuration, content pipelines, SEO auditing, and API reference.">
+  <h1 class="text-xs text-[#7a5a00] mb-8 tracking-wide uppercase">Documentation</h1>
+
+  {allDocs.length === 0 ? (
+    <div class="border border-neutral-800 px-6 py-8">
+      <p class="text-neutral-500 text-xs">Documentation is being written. Check back soon.</p>
+    </div>
+  ) : (
+    <div class="space-y-8">
+      {sectionNames.map((section) => (
+        <div>
+          <h2 class="text-xs text-neutral-500 uppercase tracking-wide mb-3">{section}</h2>
+          <div class="border border-neutral-800 divide-y divide-neutral-800">
+            {sections[section].map((doc) => (
+              <a href={`/docs/${doc.id}`} class="block px-4 py-3 hover:bg-neutral-900/50 transition-colors group">
+                <div class="text-sm text-white font-medium group-hover:text-[#ffb000] transition-colors">{doc.data.title}</div>
+                <p class="text-xs text-neutral-500 mt-1">{doc.data.description}</p>
+              </a>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  )}
+</DocsPage>

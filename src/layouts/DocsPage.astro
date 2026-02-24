@@ -1,0 +1,94 @@
+---
+import Layout from './Layout.astro'
+import { getCollection } from 'astro:content'
+
+interface Props {
+  title: string
+  description: string
+  currentSlug?: string
+}
+
+const { title, description, currentSlug } = Astro.props
+
+const allDocs = await getCollection('docs')
+
+// Group by section, sorted by order within each section
+const sections: Record<string, typeof allDocs> = {}
+for (const doc of allDocs) {
+  const section = doc.data.section
+  if (!sections[section]) sections[section] = []
+  sections[section].push(doc)
+}
+for (const section of Object.keys(sections)) {
+  sections[section].sort((a, b) => a.data.order - b.data.order)
+}
+const sectionNames = Object.keys(sections).sort()
+---
+
+<Layout title={`${title} — Docs — Pressroom HQ`} description={description}>
+  <header>
+    <nav class="border-b border-neutral-800 px-6 py-3" aria-label="Main navigation">
+      <div class="max-w-5xl mx-auto flex items-center justify-between">
+        <a href="/" class="text-[#ffb000] font-semibold tracking-tight text-sm" aria-label="Pressroom HQ home">PRESSROOM HQ</a>
+        <div class="hidden sm:flex items-center gap-6 text-xs">
+          <span class="text-[#ffb000] uppercase tracking-wide">Docs</span>
+          <a href="/blog" class="text-[#7a5a00] hover:text-[#ffb000] transition-colors uppercase tracking-wide">Blog</a>
+          <a href="/#access" class="text-[#ffb000] border border-[#ffb000]/40 px-3 py-1 hover:bg-[#ffb000]/10 transition-colors uppercase tracking-wide">Request Access</a>
+        </div>
+        <a href="/#access" class="sm:hidden text-[#ffb000] border border-[#ffb000]/40 px-3 py-1 text-xs hover:bg-[#ffb000]/10 transition-colors uppercase tracking-wide">Access</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="flex max-w-5xl mx-auto min-h-[calc(100dvh-theme(spacing.24))]">
+    <!-- Sidebar -->
+    <aside class="hidden md:block w-56 shrink-0 border-r border-neutral-800 py-8 pr-6 pl-6">
+      <a href="/docs" class="text-xs text-[#7a5a00] uppercase tracking-wide hover:text-[#ffb000] transition-colors">Docs</a>
+
+      {allDocs.length > 0 && (
+        <nav aria-label="Documentation" class="mt-6 space-y-5">
+          {sectionNames.map((section) => (
+            <div>
+              <div class="text-xs text-neutral-600 uppercase tracking-wide mb-2">{section}</div>
+              <ul class="space-y-1">
+                {sections[section].map((doc) => (
+                  <li>
+                    <a
+                      href={`/docs/${doc.id}`}
+                      class:list={[
+                        'block text-xs py-0.5 transition-colors',
+                        currentSlug === doc.id
+                          ? 'text-[#ffb000]'
+                          : 'text-neutral-500 hover:text-neutral-300',
+                      ]}
+                    >
+                      {doc.data.title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </nav>
+      )}
+    </aside>
+
+    <!-- Content -->
+    <main class="flex-1 px-6 py-8 min-w-0">
+      <slot />
+    </main>
+  </div>
+
+  <footer class="border-t border-neutral-800 px-6 py-6">
+    <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs text-neutral-600">
+      <span class="text-[#7a5a00]">PRESSROOM HQ</span>
+      <nav aria-label="Footer navigation" class="flex gap-6">
+        <a href="/docs" class="hover:text-neutral-400 transition-colors">Docs</a>
+        <a href="/blog" class="hover:text-neutral-400 transition-colors">Blog</a>
+        <a href="https://app.pressroomhq.com" class="hover:text-neutral-400 transition-colors">App</a>
+        <a href="https://github.com/pressroomhq" class="hover:text-neutral-400 transition-colors">GitHub</a>
+      </nav>
+      <span>2026 Pressroom HQ</span>
+    </div>
+  </footer>
+</Layout>

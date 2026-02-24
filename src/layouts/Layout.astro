@@ -7,9 +7,11 @@ interface Props {
 }
 
 const {
-  title = 'Pressroom HQ — AI-Powered Content Operations',
-  description = 'Pressroom HQ turns your company\'s GitHub activity, blog, and industry signals into a steady stream of content. Built for developer-focused SaaS teams.',
+  title = 'Pressroom HQ — AI-Powered Content Operations for Developer Teams',
+  description = 'Pressroom HQ monitors your GitHub activity, blog, and industry signals — then drafts LinkedIn posts, release notes, and technical content automatically. SEO auditing, AI visibility tracking, and competitive intel for SaaS teams.',
 } = Astro.props
+
+const canonicalURL = new URL(Astro.url.pathname, 'https://pressroomhq.com')
 ---
 
 <!doctype html>
@@ -18,13 +20,27 @@ const {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
     <title>{title}</title>
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:site_name" content="Pressroom HQ" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   </head>
-  <body class="bg-[#0a0a0a] text-neutral-200 antialiased">
+  <body class="bg-[#0a0a0a] text-neutral-200 antialiased min-h-[100dvh]">
     <slot />
   </body>
 </html>
