@@ -30,15 +30,21 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://pressroomhq.com')
     <meta property="og:description" content={description} />
     <meta property="og:site_name" content="Pressroom HQ" />
 
+    <!-- Open Graph image -->
+    <meta property="og:image" content="https://pressroomhq.com/og-image.jpg" />
+
     <!-- Twitter -->
-    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="https://pressroomhq.com/og-image.jpg" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   </head>
   <body class="bg-[#0a0a0a] text-neutral-200 antialiased min-h-[100dvh]">
     <slot />
