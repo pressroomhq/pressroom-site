@@ -7,7 +7,10 @@ import Layout from '../layouts/Layout.astro'
   <header>
     <nav class="border-b border-neutral-800 px-6 py-3" aria-label="Main navigation">
       <div class="max-w-5xl mx-auto flex items-center justify-between">
-        <a href="/" class="text-[#ffb000] font-semibold tracking-tight text-sm" aria-label="Pressroom HQ home">PRESSROOM HQ</a>
+        <a href="/" class="flex items-center gap-2 text-[#ffb000] font-semibold tracking-tight text-sm" aria-label="Pressroom HQ home">
+          <img src="/logo-icon-128.png" alt="" class="h-6 w-6" />
+          PRESSROOM HQ
+        </a>
         <div class="hidden sm:flex items-center gap-6 text-xs">
           <a href="#pipeline" class="text-[#7a5a00] hover:text-[#ffb000] transition-colors uppercase tracking-wide">Pipeline</a>
           <a href="#capabilities" class="text-[#7a5a00] hover:text-[#ffb000] transition-colors uppercase tracking-wide">Capabilities</a>
@@ -32,7 +35,7 @@ import Layout from '../layouts/Layout.astro'
 
         <p class="text-neutral-400 text-sm max-w-xl mb-8 leading-relaxed">
           Monitors your GitHub activity, blog, and industry signals. Drafts LinkedIn posts,
-          release notes, and technical content. Nothing publishes without your review.
+          release notes, and technical content. Nothing publishes without your review — unless you tell it to.
         </p>
 
         <div class="flex gap-3">
@@ -85,7 +88,7 @@ import Layout from '../layouts/Layout.astro'
             <div class="text-[#ffb000] text-xs mb-3 tracking-wide">03 GENERATE</div>
             <h3 class="text-white text-sm font-medium mb-2">Draft content for review</h3>
             <p class="text-neutral-500 text-xs leading-relaxed mb-4">
-              AI drafts LinkedIn posts, blog content, release emails, and gist ideas. Written in your brand voice. You approve before publish.
+              AI drafts LinkedIn posts, blog content, release emails, and gist ideas. Written in your brand voice. Review everything, or set rules and let it run.
             </p>
             <ul class="text-xs text-neutral-600 space-y-1">
               <li>linkedin + x posts</li>
@@ -178,7 +181,10 @@ import Layout from '../layouts/Layout.astro'
   <!-- Footer -->
   <footer class="border-t border-neutral-800 px-6 py-6">
     <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs text-neutral-600">
-      <span class="text-[#7a5a00]">PRESSROOM HQ</span>
+      <a href="/" class="flex items-center gap-1.5 text-[#7a5a00] hover:text-[#ffb000] transition-colors">
+        <img src="/logo-icon-128.png" alt="" class="h-4 w-4" />
+        PRESSROOM HQ
+      </a>
       <nav aria-label="Footer navigation" class="flex gap-6">
         <a href="/docs" class="hover:text-neutral-400 transition-colors">Docs</a>
         <a href="/blog" class="hover:text-neutral-400 transition-colors">Blog</a>

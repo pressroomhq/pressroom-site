@@ -16,7 +16,10 @@ const { title, description, date, author, tags } = Astro.props
   <header>
     <nav class="border-b border-neutral-800 px-6 py-3" aria-label="Main navigation">
       <div class="max-w-5xl mx-auto flex items-center justify-between">
-        <a href="/" class="text-[#ffb000] font-semibold tracking-tight text-sm" aria-label="Pressroom HQ home">PRESSROOM HQ</a>
+        <a href="/" class="flex items-center gap-2 text-[#ffb000] font-semibold tracking-tight text-sm" aria-label="Pressroom HQ home">
+          <img src="/logo-icon-128.png" alt="" class="h-6 w-6" />
+          PRESSROOM HQ
+        </a>
         <div class="flex items-center gap-6 text-xs">
           <a href="/docs" class="text-[#7a5a00] hover:text-[#ffb000] transition-colors uppercase tracking-wide">Docs</a>
           <a href="/blog" class="text-[#7a5a00] hover:text-[#ffb000] transition-colors uppercase tracking-wide">Blog</a>
@@ -51,7 +54,10 @@ const { title, description, date, author, tags } = Astro.props
 
   <footer class="border-t border-neutral-800 px-6 py-6">
     <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs text-neutral-600">
-      <span class="text-[#7a5a00]">PRESSROOM HQ</span>
+      <a href="/" class="flex items-center gap-1.5 text-[#7a5a00] hover:text-[#ffb000] transition-colors">
+        <img src="/logo-icon-128.png" alt="" class="h-4 w-4" />
+        PRESSROOM HQ
+      </a>
       <nav aria-label="Footer navigation" class="flex gap-6">
         <a href="/docs" class="hover:text-neutral-400 transition-colors">Docs</a>
         <a href="/blog" class="hover:text-neutral-400 transition-colors">Blog</a>
