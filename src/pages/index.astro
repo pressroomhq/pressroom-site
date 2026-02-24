@@ -1,0 +1,206 @@
+---
+import Layout from '../layouts/Layout.astro'
+---
+
+<Layout>
+  <!-- Nav -->
+  <nav class="border-b border-neutral-800 px-6 py-4">
+    <div class="max-w-6xl mx-auto flex items-center justify-between">
+      <span class="font-mono text-amber-400 font-semibold tracking-tight text-lg">PRESSROOM HQ</span>
+      <div class="flex items-center gap-6">
+        <a href="#how-it-works" class="text-sm text-neutral-400 hover:text-neutral-200 transition-colors">How it works</a>
+        <a href="#features" class="text-sm text-neutral-400 hover:text-neutral-200 transition-colors">Features</a>
+        <a href="https://blog.pressroomhq.com" class="text-sm text-neutral-400 hover:text-neutral-200 transition-colors">Blog</a>
+        <a href="#waitlist" class="text-sm bg-amber-400 text-black font-medium px-4 py-1.5 rounded hover:bg-amber-300 transition-colors">Join waitlist</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="px-6 pt-24 pb-20 text-center">
+    <div class="max-w-4xl mx-auto">
+      <div class="inline-flex items-center gap-2 border border-amber-400/30 bg-amber-400/5 text-amber-400 text-xs font-mono px-3 py-1.5 rounded-full mb-8">
+        <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
+        Built for developer-focused SaaS teams
+      </div>
+
+      <h1 class="text-5xl sm:text-6xl font-bold tracking-tight text-white leading-tight mb-6">
+        Your GitHub repo is a<br />
+        <span class="text-amber-400">content goldmine.</span><br />
+        Start mining it.
+      </h1>
+
+      <p class="text-xl text-neutral-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+        Pressroom HQ watches your company's GitHub activity, blog, and industry signals —
+        then turns them into LinkedIn posts, release notes, and technical content.
+        Automatically.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-3 justify-center">
+        <a href="#waitlist" class="bg-amber-400 text-black font-semibold px-8 py-3 rounded hover:bg-amber-300 transition-colors text-base">
+          Join the waitlist
+        </a>
+        <a href="https://app.pressroomhq.com" class="border border-neutral-700 text-neutral-300 font-medium px-8 py-3 rounded hover:border-neutral-500 hover:text-white transition-colors text-base">
+          View demo →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Signal flow -->
+  <section id="how-it-works" class="px-6 py-20 border-t border-neutral-800">
+    <div class="max-w-5xl mx-auto">
+      <p class="text-amber-400 font-mono text-xs tracking-widest uppercase text-center mb-4">How it works</p>
+      <h2 class="text-3xl font-bold text-center text-white mb-16">Signal in. Content out.</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-px bg-neutral-800 rounded-lg overflow-hidden">
+        <div class="bg-[#0a0a0a] p-8">
+          <div class="font-mono text-amber-400 text-xs mb-4">01 / WIRE</div>
+          <h3 class="text-white font-semibold text-lg mb-3">Connect your sources</h3>
+          <p class="text-neutral-400 text-sm leading-relaxed">
+            Link your GitHub org, blog RSS, and changelog. Pressroom watches your own channels for activity worth writing about.
+          </p>
+          <ul class="mt-4 space-y-1.5 text-xs text-neutral-500 font-mono">
+            <li>→ GitHub releases &amp; commits</li>
+            <li>→ Blog &amp; changelog feeds</li>
+            <li>→ Team member activity</li>
+          </ul>
+        </div>
+        <div class="bg-[#0d0d0d] p-8">
+          <div class="font-mono text-amber-400 text-xs mb-4">02 / SCOUT</div>
+          <h3 class="text-white font-semibold text-lg mb-3">Track the industry</h3>
+          <p class="text-neutral-400 text-sm leading-relaxed">
+            Subscribe to subreddits, Hacker News keywords, and RSS feeds. Signals are scored for relevance — noise filtered out.
+          </p>
+          <ul class="mt-4 space-y-1.5 text-xs text-neutral-500 font-mono">
+            <li>→ Reddit &amp; Hacker News</li>
+            <li>→ Custom RSS feeds</li>
+            <li>→ Semantic relevance scoring</li>
+          </ul>
+        </div>
+        <div class="bg-[#0a0a0a] p-8">
+          <div class="font-mono text-amber-400 text-xs mb-4">03 / GENERATE</div>
+          <h3 class="text-white font-semibold text-lg mb-3">Publish with confidence</h3>
+          <p class="text-neutral-400 text-sm leading-relaxed">
+            Claude turns your signals into LinkedIn posts, blog drafts, release emails, and gist ideas — in your voice, ready to review.
+          </p>
+          <ul class="mt-4 space-y-1.5 text-xs text-neutral-500 font-mono">
+            <li>→ LinkedIn &amp; X posts</li>
+            <li>→ Blog &amp; release emails</li>
+            <li>→ Gist suggestions per engineer</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="px-6 py-20 border-t border-neutral-800">
+    <div class="max-w-5xl mx-auto">
+      <p class="text-amber-400 font-mono text-xs tracking-widest uppercase text-center mb-4">Features</p>
+      <h2 class="text-3xl font-bold text-center text-white mb-16">Built for teams that ship</h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="border border-neutral-800 rounded-lg p-6 hover:border-neutral-700 transition-colors">
+          <div class="text-2xl mb-3">⚡</div>
+          <h3 class="text-white font-semibold mb-2">SEO Audit</h3>
+          <p class="text-neutral-400 text-sm leading-relaxed">Automated scans with P0/P1 issue scoring. Export full reports. Track scores over time across all your properties.</p>
+        </div>
+        <div class="border border-neutral-800 rounded-lg p-6 hover:border-neutral-700 transition-colors">
+          <div class="text-2xl mb-3">🔍</div>
+          <h3 class="text-white font-semibold mb-2">AI Visibility</h3>
+          <p class="text-neutral-400 text-sm leading-relaxed">See how LLMs describe your product when customers ask. Know where you're mentioned — and where you're not.</p>
+        </div>
+        <div class="border border-neutral-800 rounded-lg p-6 hover:border-neutral-700 transition-colors">
+          <div class="text-2xl mb-3">📡</div>
+          <h3 class="text-white font-semibold mb-2">Competitive Intel</h3>
+          <p class="text-neutral-400 text-sm leading-relaxed">Audit competitor sites. Compare scores. Know when they ship something worth reacting to.</p>
+        </div>
+        <div class="border border-neutral-800 rounded-lg p-6 hover:border-neutral-700 transition-colors">
+          <div class="text-2xl mb-3">🧬</div>
+          <h3 class="text-white font-semibold mb-2">Gist Suggestions</h3>
+          <p class="text-neutral-400 text-sm leading-relaxed">Pressroom scans your team's GitHub activity and suggests technical posts and gists for each engineer, automatically.</p>
+        </div>
+        <div class="border border-neutral-800 rounded-lg p-6 hover:border-neutral-700 transition-colors">
+          <div class="text-2xl mb-3">🎙️</div>
+          <h3 class="text-white font-semibold mb-2">Brand Voice</h3>
+          <p class="text-neutral-400 text-sm leading-relaxed">Every piece of content is written in your voice — trained on your existing posts, tone, and audience profile.</p>
+        </div>
+        <div class="border border-neutral-800 rounded-lg p-6 hover:border-neutral-700 transition-colors">
+          <div class="text-2xl mb-3">📊</div>
+          <h3 class="text-white font-semibold mb-2">Scoreboard</h3>
+          <p class="text-neutral-400 text-sm leading-relaxed">Live dashboard showing SEO health, AI visibility, and pipeline status for every property and company you manage.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dogfood callout -->
+  <section class="px-6 py-20 border-t border-neutral-800">
+    <div class="max-w-3xl mx-auto text-center">
+      <div class="border border-amber-400/20 bg-amber-400/5 rounded-lg p-8">
+        <p class="font-mono text-amber-400 text-xs tracking-widest uppercase mb-4">Dogfood</p>
+        <h2 class="text-2xl font-bold text-white mb-4">Pressroom HQ runs on Pressroom HQ.</h2>
+        <p class="text-neutral-400 leading-relaxed mb-6">
+          This site is scanned by our own SEO auditor. Our blog is fed by our own SIGINT pipeline.
+          Our team's GitHub activity generates our own gist suggestions. We eat our own cooking.
+        </p>
+        <a href="https://app.pressroomhq.com" class="inline-flex items-center gap-2 text-amber-400 font-medium hover:text-amber-300 transition-colors text-sm">
+          See it in the app →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Waitlist -->
+  <section id="waitlist" class="px-6 py-20 border-t border-neutral-800">
+    <div class="max-w-lg mx-auto text-center">
+      <p class="text-amber-400 font-mono text-xs tracking-widest uppercase mb-4">Early access</p>
+      <h2 class="text-3xl font-bold text-white mb-4">Get early access</h2>
+      <p class="text-neutral-400 mb-8">
+        We're opening up to a small group of teams first. Drop your email and we'll reach out.
+      </p>
+      <form id="waitlist-form" class="flex flex-col sm:flex-row gap-3">
+        <input
+          type="email"
+          id="waitlist-email"
+          placeholder="you@yourcompany.com"
+          required
+          class="flex-1 bg-neutral-900 border border-neutral-700 rounded px-4 py-3 text-sm text-neutral-200 placeholder-neutral-500 focus:outline-none focus:border-amber-400/50 transition-colors"
+        />
+        <button
+          type="submit"
+          class="bg-amber-400 text-black font-semibold px-6 py-3 rounded hover:bg-amber-300 transition-colors text-sm whitespace-nowrap"
+        >
+          Join waitlist
+        </button>
+      </form>
+      <p id="waitlist-msg" class="mt-4 text-sm text-neutral-500" style="display:none"></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-neutral-800 px-6 py-10">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-neutral-500">
+      <span class="font-mono text-amber-400/60 font-medium">PRESSROOM HQ</span>
+      <div class="flex gap-6">
+        <a href="https://blog.pressroomhq.com" class="hover:text-neutral-300 transition-colors">Blog</a>
+        <a href="https://app.pressroomhq.com" class="hover:text-neutral-300 transition-colors">App</a>
+        <a href="https://github.com/pressroomhq" class="hover:text-neutral-300 transition-colors">GitHub</a>
+      </div>
+      <span>© 2026 Pressroom HQ</span>
+    </div>
+  </footer>
+</Layout>
+
+<script>
+  document.getElementById('waitlist-form')!.addEventListener('submit', (e) => {
+    e.preventDefault()
+    const email = (document.getElementById('waitlist-email') as HTMLInputElement).value
+    const msg = document.getElementById('waitlist-msg')!
+    // TODO: wire to Supabase or similar after auth migration
+    msg.textContent = `Got it — we'll reach out to ${email} when we're ready.`
+    msg.style.display = 'block'
+    ;(e.target as HTMLFormElement).reset()
+  })
+</script>
