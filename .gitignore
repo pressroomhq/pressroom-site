@@ -1,5 +1,8 @@
 # build output
 dist/
+
+# synced docs (generated from pressroom-docs repo)
+src/content/docs/*.md
 # generated types
 .astro/
 
