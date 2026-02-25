@@ -54,7 +54,7 @@ The editorial layer is the part most people skip. They either don't create conte
 
 What actually works is treating your GitHub activity as structured input that gets processed through your brand voice before it touches an audience. A performance improvement is just context. The editorial layer turns it into: "We shaved 200ms off cold query time for datasets over 500k rows — here's what we changed and why it matters for teams running X workload." That's a LinkedIn post that gets shared by people who've hit that exact problem.
 
-[LINK: turning GitHub releases into LinkedIn content]
+[turning GitHub releases into LinkedIn content](https://pressroomhq.com/blog)
 
 This isn't about automating content. It's about reducing friction between what you're already doing (shipping) and what you need to be doing (maintaining audience reach). The bottleneck for most devtools teams isn't ideas — it's bandwidth. One engineer can't simultaneously ship code and write three thoughtful distribution pieces per week. But with the right content operations setup, one engineer reviewing and approving pre-structured content can handle it.
 
@@ -76,7 +76,7 @@ I built Pressroom HQ because I kept watching this exact problem play out. Teams 
 
 What we built is a content operations layer that watches your GitHub activity, extracts developer signal, and surfaces structured content drafts — LinkedIn posts, technical blog starters, release summaries — that a human then reviews, edits, and approves before anything goes out. The human is still in the loop. Always. We're not automating your voice, we're stopping the 90% of content that dies in the backlog because nobody had time to draft it.
 
-[LINK: Pressroom HQ architecture overview]
+[Pressroom HQ architecture overview](https://pressroomhq.com/blog)
 
 The teams this works for are ones where the bottleneck is bandwidth, not direction. You know what you're building. You know why it matters. You just don't have 10 hours a week to translate your ship velocity into audience reach. Pressroom closes that gap.
 
@@ -86,4 +86,4 @@ The ceiling isn't your product. It's your distribution surface area.
 
 ---
 
-**What's next:** If you want to see how this works in practice — specifically how to structure GitHub release notes so they're already halfway to a publishable post — that's worth a separate deep dive. The formatting decisions matter more than most people think. [LINK: release notes automation]
+**What's next:** If you want to see how this works in practice — specifically how to structure GitHub release notes so they're already halfway to a publishable post — that's worth a separate deep dive. The formatting decisions matter more than most people think. [release notes automation](https://pressroomhq.com/docs)

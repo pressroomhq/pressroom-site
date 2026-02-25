@@ -12,7 +12,7 @@ We shipped the Pressroom HQ documentation this week. Not placeholder docs. Not a
 
 If you've been watching from the outside wondering how Pressroom fits into a developer team's workflow, the docs are the honest answer.
 
-[LINK: how Pressroom works]
+[how Pressroom works](https://pressroomhq.com/docs)
 
 ---
 
@@ -45,7 +45,7 @@ Incomplete documentation signals a product that isn't ready to integrate into an
 
 Ours is written to answer the questions a developer would actually ask.
 
-[LINK: developer relations strategies]
+[developer relations strategies](https://pressroomhq.com/blog)
 
 ---
 
@@ -77,7 +77,7 @@ A team evaluating Pressroom should be able to answer these five questions from t
 
 If you read [pressroomhq.com/docs](https://pressroomhq.com/docs) and can't answer those five, that's a gap we want to know about. The docs update as the platform updates.
 
-[LINK: release notes automation]
+[release notes automation](https://pressroomhq.com/docs)
 
 ---
 
@@ -89,7 +89,7 @@ It's a hosted content operations platform. The infrastructure question is alread
 
 What stays with your team: the review. Every piece of content that moves through Pressroom gets reviewed by a human before it goes anywhere. This isn't a configuration option — it's a design decision, and the docs are explicit about it.
 
-[LINK: content pipeline architecture]
+[content pipeline architecture](https://pressroomhq.com/docs)
 
 ---
 

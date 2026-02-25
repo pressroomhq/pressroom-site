@@ -68,7 +68,7 @@ This is why GitHub activity is the right source for content operations in a deve
 - Issue links (what user problem this addresses)
 - Release tag (where it fits in the versioning story)
 
-That's dense signal. Feed it into a content pipeline and you're not asking an LLM to invent — you're asking it to compress and reframe material that already exists. The editorial layer on top is what turns that compression into something your audience actually reads. [LINK: turning GitHub releases into LinkedIn content]
+That's dense signal. Feed it into a content pipeline and you're not asking an LLM to invent — you're asking it to compress and reframe material that already exists. The editorial layer on top is what turns that compression into something your audience actually reads. [turning GitHub releases into LinkedIn content](https://pressroomhq.com/blog)
 
 The failure mode in most content automation isn't the AI output quality. It's the signal quality going in. Generic prompts produce generic content. GitHub-native signal produces content with specificity — version numbers, feature names, actual behavioral changes — that engineers trust and audiences can act on.
 
@@ -89,7 +89,7 @@ That's it. No OAuth dance. No session management. No browser dependency. Your CI
 
 Compare this to tools that require a browser session, a managed OAuth flow, or a proprietary SDK to access your own content data. Those tools aren't wrong — they're just optimizing for a different user. They're optimizing for the marketing coordinator who logs in through a dashboard. They're not optimizing for the engineering team that wants content ops to behave like infrastructure.
 
-Bearer tokens mean Pressroom can live in your existing automation layer without asking you to build around its constraints. [LINK: headless access docs]
+Bearer tokens mean Pressroom can live in your existing automation layer without asking you to build around its constraints. [headless access docs](https://pressroomhq.com/docs)
 
 ---
 
@@ -111,7 +111,7 @@ If content operations is infrastructure, it should be accessible through the sam
 
 This is what "headless access" means in practice. Not a conceptual API philosophy — actual callable tools that let your team integrate content review, draft retrieval, and signal detection into whatever workflow makes sense for your stack.
 
-The alternative is a content tool that lives in a separate tab, requires a separate login, and sits outside your engineering workflow entirely. That tool will always be deprioritized. It will accumulate drafts no one reviews, signals no one acts on, and release notes no one publishes. [LINK: MCP server documentation]
+The alternative is a content tool that lives in a separate tab, requires a separate login, and sits outside your engineering workflow entirely. That tool will always be deprioritized. It will accumulate drafts no one reviews, signals no one acts on, and release notes no one publishes. [MCP server documentation](https://pressroomhq.com/docs)
 
 The human review step doesn't go away with MCP tooling — that's the point. Pressroom surfaces drafted content and flags signals for a human to act on. The MCP layer means that review can happen inside the tools your team already lives in, rather than requiring a context switch to a separate platform.
 
@@ -125,7 +125,7 @@ This matters because content operations for a real engineering team isn't a sing
 
 Manual curation of which repos to watch is a maintenance problem that compounds. Someone updates the repo list when they remember to, misses a launch because the new service repo wasn't added, and the release note for a significant API change never gets written.
 
-Org-level discovery means Pressroom watches the right repos automatically, filters for semantic relevance (not just activity volume), and surfaces signals worth writing about — without requiring someone to maintain a configuration file every time your org's repo structure changes. [LINK: developer signal detection]
+Org-level discovery means Pressroom watches the right repos automatically, filters for semantic relevance (not just activity volume), and surfaces signals worth writing about — without requiring someone to maintain a configuration file every time your org's repo structure changes. [developer signal detection](https://pressroomhq.com/docs)
 
 This is noise filtering at the infrastructure layer, not the human layer. It's the difference between a pipeline that surfaces 3 high-signal drafts per week and one that dumps 40 low-quality suggestions into a queue nobody reads.
 

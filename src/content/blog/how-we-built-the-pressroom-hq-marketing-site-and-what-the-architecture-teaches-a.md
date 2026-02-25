@@ -43,7 +43,7 @@ The `|| true` and fallback echo aren't laziness — they're intentional. Docs sy
 
 This pattern — separate content repos, build-time sync, fallback handling — is the same pattern that makes sense for any devtools team running multiple repos with documentation scattered across them. The content operations principle here: **treat your docs as a content source, not an afterthought.**
 
-[LINK: docs architecture for developer products]
+[docs architecture for developer products](https://pressroomhq.com/docs)
 
 ## Why We Used a Terminal Aesthetic (And Why It's Not Just Vibes)
 
@@ -72,7 +72,7 @@ This is exactly why the Pressroom site has:
 
 Not because we're chasing algorithm changes. Because **well-structured, specific content has always been the thing that earns citations** — whether from a human editor linking to you in 2010 or an LLM surfacing you as a reference in 2025.
 
-[LINK: content structure for LLM visibility]
+[content structure for LLM visibility](https://pressroomhq.com/docs)
 
 ## The Content Operations Lesson in the Commit Log
 
@@ -88,7 +88,7 @@ Pressroom doesn't replace that person's judgment. Every draft still goes through
 
 Seven commits with zero distribution is a week of developer signal that nobody outside your repo saw. For a solo founder or a one-engineer team building in public, that compounds fast.
 
-[LINK: turning GitHub commits into content]
+[turning GitHub commits into content](https://pressroomhq.com/blog)
 
 ## What's Next
 

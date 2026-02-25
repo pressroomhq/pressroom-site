@@ -49,7 +49,7 @@ Instead, it accumulates in your changelog. Complete, accurate, invisible to 99% 
 
 The cost isn't just missed impressions. It compounds. Teams that consistently translate engineering output into audience-facing content build awareness that stacks. Teams that don't are perpetually reintroducing themselves — every time they show up in a developer community or a search result, they're starting from zero.
 
-[LINK: Building in public — how developer teams build audience through shipping transparency]
+[Building in public — how developer teams build audience through shipping transparency](https://pressroomhq.com/blog)
 
 ---
 
@@ -80,7 +80,7 @@ What you actually need:
 
 That last step isn't optional. It's the whole point. Automated drafts without review are how you end up publishing something technically accurate but tonally wrong, or missing the actual story buried in the diff.
 
-[LINK: Release notes automation — how Pressroom extracts content from GitHub activity]
+[Release notes automation — how Pressroom extracts content from GitHub activity](https://pressroomhq.com/blog)
 
 Pressroom is built around this sequence. It watches your GitHub activity, detects signal worth amplifying, generates structured drafts, and surfaces them for review. The automation handles the parts that kill marketing bandwidth — the monitoring, the first draft, the formatting. The human handles the judgment call.
 
@@ -114,6 +114,6 @@ If you're shipping regularly and your changelog is the only artifact coming out 
 
 The starting point: connect your GitHub activity to a content pipeline that generates reviewable drafts before your team has to make a single blank-page decision. The editorial work gets easier when the hardest part — knowing what happened and why it matters — is already handled.
 
-[LINK: How to set up Pressroom with your GitHub repos — getting started guide]
+[How to set up Pressroom with your GitHub repos — getting started guide](https://pressroomhq.com/docs)
 
 Your changelog will keep doing what it's supposed to do. Pressroom handles what it was never built for.

@@ -22,7 +22,7 @@ For developer teams, this is a specific operational problem. Your product ships 
 
 The Search Engine Land piece on content freshness in the AI age makes the flip side of this: stale content doesn't just rank poorly, it actively misleads the models that synthesize it. A team that ships v2.3 of their API but hasn't updated their docs or published any signal about what changed is poisoning their own GEO footprint.
 
-[LINK: release notes automation]
+[release notes automation](https://pressroomhq.com/docs)
 
 ## What "Fresh" Actually Means for Developer Content
 
@@ -38,7 +38,7 @@ That third point matters more than most teams realize. A technically accurate pi
 
 The real question is: who's doing that maintenance on your team? In most dev-focused companies I've talked to, the honest answer is "nobody."
 
-[LINK: content operations scaling]
+[content operations scaling](https://pressroomhq.com/docs)
 
 ## The Signal Is Already There — You're Just Not Publishing It
 
@@ -63,7 +63,7 @@ Release pipeline (current reality for most dev teams):
 
 The delay isn't laziness. It's bandwidth. Writing a technically accurate, specific, audience-appropriate piece about a release requires someone who understands the engineering reality well enough to be precise and understands the content layer well enough to make it scannable and findable. That person is rare and expensive.
 
-[LINK: developer signal detection]
+[developer signal detection](https://pressroomhq.com/docs)
 
 ## What a GEO-Ready Content Pipeline Actually Looks Like
 
@@ -87,7 +87,7 @@ The same release signal should be expressible as a changelog entry, a LinkedIn p
 
 Older content that references current product areas should get surfaced for review when related changes ship. This is the hardest piece to operationalize without tooling, and it's where most teams completely fall down.
 
-[LINK: brand voice consistency]
+[brand voice consistency](https://pressroomhq.com/docs)
 
 ## The Practical Implication for Dev Teams Right Now
 

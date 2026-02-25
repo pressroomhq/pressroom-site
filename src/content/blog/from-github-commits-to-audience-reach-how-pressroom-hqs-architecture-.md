@@ -62,7 +62,7 @@ curl -X POST https://app.pressroomhq.com/api/mcp \
   }'
 ```
 
-[LINK: Pressroom MCP documentation]
+[Pressroom MCP documentation](https://pressroomhq.com/docs)
 
 ## GitHub Auto-Discovery: Why This Matters for Orgs
 
@@ -74,7 +74,7 @@ The signal you miss is usually from repos you forgot to configure. A library get
 
 We also added validation of GitHub tokens before they're used in discovery. That sounds obvious, but it prevents a class of silent failures where the system appears to be working while actually not ingesting anything.
 
-[LINK: GitHub integration setup docs]
+[GitHub integration setup docs](https://pressroomhq.com/docs)
 
 ## GSC Integration: Closing the Loop on Distribution
 
@@ -84,7 +84,7 @@ The recommendation layer can surface content opportunities informed by actual se
 
 This isn't SEO automation. It's giving the human reviewer better context when they're deciding what to approve and prioritize.
 
-[LINK: GSC integration guide]
+[GSC integration guide](https://pressroomhq.com/docs)
 
 ## The Marketing Site Is Part of the Architecture
 
@@ -102,6 +102,6 @@ The platform is open for early access. The immediate roadmap:
 
 If you're a developer-focused SaaS team, a DevTools maker, or an engineering team shipping in public without enough marketing bandwidth to keep up, Pressroom is worth a look. Not because it removes the work — because it removes the parts that shouldn't require human attention.
 
-[LINK: Pressroom HQ — get early access]
+[Pressroom HQ — get early access](https://pressroomhq.com)
 
 The content pipeline problem doesn't fix itself. But it has a specific, solvable architecture. That's what we built.
