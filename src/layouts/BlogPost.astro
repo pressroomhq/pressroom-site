@@ -21,8 +21,8 @@ const { title, description, date, author, tags } = Astro.props
           PRESSROOM HQ
         </a>
         <div class="flex items-center gap-6 text-xs">
-          <a href="/docs" class="text-[#7a5a00] hover:text-[#ffb000] transition-colors uppercase tracking-wide">Docs</a>
-          <a href="/blog" class="text-[#7a5a00] hover:text-[#ffb000] transition-colors uppercase tracking-wide">Blog</a>
+          <a href="/docs/" class="text-[#7a5a00] hover:text-[#ffb000] transition-colors uppercase tracking-wide">Docs</a>
+          <a href="/blog/" class="text-[#7a5a00] hover:text-[#ffb000] transition-colors uppercase tracking-wide">Blog</a>
         </div>
       </div>
     </nav>
@@ -31,7 +31,7 @@ const { title, description, date, author, tags } = Astro.props
   <main class="px-6 py-12">
     <article class="max-w-3xl mx-auto">
       <div class="mb-8">
-        <a href="/blog" class="text-xs text-[#7a5a00] hover:text-[#ffb000] transition-colors uppercase tracking-wide mb-4 inline-block">&larr; Back to blog</a>
+        <a href="/blog/" class="text-xs text-[#7a5a00] hover:text-[#ffb000] transition-colors uppercase tracking-wide mb-4 inline-block">&larr; Back to blog</a>
         <h1 class="text-2xl sm:text-3xl font-bold text-white leading-snug mb-3">{title}</h1>
         <div class="flex flex-wrap items-center gap-4 text-xs text-neutral-500">
           <time datetime={date}>{date}</time>
@@ -59,10 +59,11 @@ const { title, description, date, author, tags } = Astro.props
         PRESSROOM HQ
       </a>
       <nav aria-label="Footer navigation" class="flex gap-6">
-        <a href="/docs" class="hover:text-neutral-400 transition-colors">Docs</a>
-        <a href="/blog" class="hover:text-neutral-400 transition-colors">Blog</a>
+        <a href="/docs/" class="hover:text-neutral-400 transition-colors">Docs</a>
+        <a href="/blog/" class="hover:text-neutral-400 transition-colors">Blog</a>
         <a href="https://app.pressroomhq.com" class="hover:text-neutral-400 transition-colors">App</a>
         <a href="https://github.com/pressroomhq" class="hover:text-neutral-400 transition-colors">GitHub</a>
+        <a href="https://www.linkedin.com/company/pressroom-hq" class="hover:text-neutral-400 transition-colors">LinkedIn</a>
       </nav>
       <span>2026 Pressroom HQ</span>
     </div>

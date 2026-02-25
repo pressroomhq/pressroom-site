@@ -1,6 +1,6 @@
 ---
-title: "BLOG DRAFT  From GitHub Commits to Audience Reach: How Pressroom HQ's Architecture Actually Works"
-description: "# From GitHub Commits to Audience Reach: How Pressroom HQ Actually Works"
+title: "From GitHub Commits to Audience Reach: How Pressroom HQ's Architecture Actually Works"
+description: "You ship code. Your changelog updates. Your release notes go out. And then nothing. Pressroom HQ is built to close that content operations gap."
 date: "2026-02-24"
 author: "company"
 tags: ["pressroom"]

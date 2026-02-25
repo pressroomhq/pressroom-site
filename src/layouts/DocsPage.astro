@@ -35,7 +35,7 @@ const sectionNames = Object.keys(sections).sort()
         </a>
         <div class="hidden sm:flex items-center gap-6 text-xs">
           <span class="text-[#ffb000] uppercase tracking-wide">Docs</span>
-          <a href="/blog" class="text-[#7a5a00] hover:text-[#ffb000] transition-colors uppercase tracking-wide">Blog</a>
+          <a href="/blog/" class="text-[#7a5a00] hover:text-[#ffb000] transition-colors uppercase tracking-wide">Blog</a>
           <a href="/#access" class="text-[#ffb000] border border-[#ffb000]/40 px-3 py-1 hover:bg-[#ffb000]/10 transition-colors uppercase tracking-wide">Request Access</a>
         </div>
         <a href="/#access" class="sm:hidden text-[#ffb000] border border-[#ffb000]/40 px-3 py-1 text-xs hover:bg-[#ffb000]/10 transition-colors uppercase tracking-wide">Access</a>
@@ -46,7 +46,7 @@ const sectionNames = Object.keys(sections).sort()
   <div class="flex max-w-5xl mx-auto min-h-[calc(100dvh-theme(spacing.24))]">
     <!-- Sidebar -->
     <aside class="hidden md:block w-56 shrink-0 border-r border-neutral-800 py-8 pr-6 pl-6">
-      <a href="/docs" class="text-xs text-[#7a5a00] uppercase tracking-wide hover:text-[#ffb000] transition-colors">Docs</a>
+      <a href="/docs/" class="text-xs text-[#7a5a00] uppercase tracking-wide hover:text-[#ffb000] transition-colors">Docs</a>
 
       {allDocs.length > 0 && (
         <nav aria-label="Documentation" class="mt-6 space-y-5">
@@ -57,7 +57,7 @@ const sectionNames = Object.keys(sections).sort()
                 {sections[section].map((doc) => (
                   <li>
                     <a
-                      href={`/docs/${doc.id}`}
+                      href={`/docs/${doc.id}/`}
                       class:list={[
                         'block text-xs py-0.5 transition-colors',
                         currentSlug === doc.id
@@ -89,10 +89,11 @@ const sectionNames = Object.keys(sections).sort()
         PRESSROOM HQ
       </a>
       <nav aria-label="Footer navigation" class="flex gap-6">
-        <a href="/docs" class="hover:text-neutral-400 transition-colors">Docs</a>
-        <a href="/blog" class="hover:text-neutral-400 transition-colors">Blog</a>
+        <a href="/docs/" class="hover:text-neutral-400 transition-colors">Docs</a>
+        <a href="/blog/" class="hover:text-neutral-400 transition-colors">Blog</a>
         <a href="https://app.pressroomhq.com" class="hover:text-neutral-400 transition-colors">App</a>
         <a href="https://github.com/pressroomhq" class="hover:text-neutral-400 transition-colors">GitHub</a>
+        <a href="https://www.linkedin.com/company/pressroom-hq" class="hover:text-neutral-400 transition-colors">LinkedIn</a>
       </nav>
       <span>2026 Pressroom HQ</span>
     </div>

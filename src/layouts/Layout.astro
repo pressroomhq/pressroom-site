@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css'
+import { ClientRouter } from 'astro:transitions'
 
 interface Props {
   title?: string
@@ -46,6 +47,7 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://pressroomhq.com')
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
     <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <ClientRouter />
   </head>
   <body class="bg-[#0a0a0a] text-neutral-200 antialiased min-h-[100dvh]">
     <slot />

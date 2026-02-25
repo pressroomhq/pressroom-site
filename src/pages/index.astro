@@ -14,8 +14,8 @@ import Layout from '../layouts/Layout.astro'
         <div class="hidden sm:flex items-center gap-6 text-xs">
           <a href="#pipeline" class="text-[#7a5a00] hover:text-[#ffb000] transition-colors uppercase tracking-wide">Pipeline</a>
           <a href="#capabilities" class="text-[#7a5a00] hover:text-[#ffb000] transition-colors uppercase tracking-wide">Capabilities</a>
-          <a href="/docs" class="text-[#7a5a00] hover:text-[#ffb000] transition-colors uppercase tracking-wide">Docs</a>
-          <a href="/blog" class="text-[#7a5a00] hover:text-[#ffb000] transition-colors uppercase tracking-wide">Blog</a>
+          <a href="/docs/" class="text-[#7a5a00] hover:text-[#ffb000] transition-colors uppercase tracking-wide">Docs</a>
+          <a href="/blog/" class="text-[#7a5a00] hover:text-[#ffb000] transition-colors uppercase tracking-wide">Blog</a>
           <a href="#access" class="text-[#ffb000] border border-[#ffb000]/40 px-3 py-1 hover:bg-[#ffb000]/10 transition-colors uppercase tracking-wide">Request Access</a>
         </div>
         <a href="#access" class="sm:hidden text-[#ffb000] border border-[#ffb000]/40 px-3 py-1 text-xs hover:bg-[#ffb000]/10 transition-colors uppercase tracking-wide">Access</a>
@@ -24,19 +24,27 @@ import Layout from '../layouts/Layout.astro'
   </header>
 
   <main>
-    <!-- Header -->
+    <!-- Hero -->
     <section class="px-6 pt-16 pb-12 border-b border-neutral-800">
       <div class="max-w-5xl mx-auto">
         <div class="text-xs text-[#7a5a00] mb-6 tracking-wide">SYS / PRESSROOM HQ / v0.1</div>
 
         <h1 class="text-4xl sm:text-5xl font-bold text-white leading-tight mb-5 max-w-3xl">
-          AI-powered content operations for teams that ship code
+          Your team ships code every week. Your content pipeline should keep up.
         </h1>
 
-        <p class="text-neutral-400 text-sm max-w-xl mb-8 leading-relaxed">
-          Monitors your GitHub activity, blog, and industry signals. Drafts LinkedIn posts,
-          release notes, and technical content. Nothing publishes without your review — unless you tell it to.
+        <p class="text-neutral-400 text-sm max-w-2xl mb-6 leading-relaxed">
+          Pressroom HQ is an AI-powered content operations platform for developer-focused companies.
+          It monitors your GitHub repos, blog, and industry signals — then drafts LinkedIn posts,
+          release notes, technical blog content, and gist ideas automatically. Everything is written
+          in your brand voice. Nothing publishes without your review — unless you tell it to.
         </p>
+
+        <ul class="text-neutral-500 text-xs space-y-2 mb-8 max-w-xl">
+          <li class="flex items-start gap-2"><span class="text-[#ffb000] mt-px">&#9654;</span> Turns GitHub activity into publishable content — release notes, LinkedIn posts, engineer gists</li>
+          <li class="flex items-start gap-2"><span class="text-[#ffb000] mt-px">&#9654;</span> Monitors Reddit, Hacker News, and RSS for signals relevant to your product</li>
+          <li class="flex items-start gap-2"><span class="text-[#ffb000] mt-px">&#9654;</span> Audits your SEO, tracks AI visibility, and benchmarks against competitors</li>
+        </ul>
 
         <div class="flex gap-3">
           <a href="#access" class="bg-[#ffb000] text-[#0a0a0a] font-semibold px-5 py-2 text-xs hover:bg-[#e09e00] transition-colors uppercase tracking-wide">
@@ -45,6 +53,32 @@ import Layout from '../layouts/Layout.astro'
           <a href="https://app.pressroomhq.com" class="border border-neutral-700 text-neutral-400 px-5 py-2 text-xs hover:border-neutral-500 hover:text-neutral-200 transition-colors uppercase tracking-wide">
             Open App
           </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Built for -->
+    <section class="px-6 py-12 border-b border-neutral-800">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-xs text-[#7a5a00] mb-8 tracking-wide uppercase">Built for</h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-px bg-neutral-800">
+          <div class="bg-[#0a0a0a] p-5">
+            <div class="text-[#ffb000] text-xs mb-2 tracking-wide">DEVTOOLS COMPANIES</div>
+            <p class="text-neutral-500 text-xs leading-relaxed">Ship features weekly but struggle to turn releases into content that reaches developers.</p>
+          </div>
+          <div class="bg-[#0a0a0a] p-5">
+            <div class="text-[#ffb000] text-xs mb-2 tracking-wide">SAAS ENGINEERING TEAMS</div>
+            <p class="text-neutral-500 text-xs leading-relaxed">Have active GitHub repos and engineering blogs but no dedicated marketing bandwidth.</p>
+          </div>
+          <div class="bg-[#0a0a0a] p-5">
+            <div class="text-[#ffb000] text-xs mb-2 tracking-wide">DEVELOPER RELATIONS</div>
+            <p class="text-neutral-500 text-xs leading-relaxed">Need to keep LinkedIn, blogs, and community channels active without burning out the team.</p>
+          </div>
+          <div class="bg-[#0a0a0a] p-5">
+            <div class="text-[#ffb000] text-xs mb-2 tracking-wide">TECHNICAL FOUNDERS</div>
+            <p class="text-neutral-500 text-xs leading-relaxed">Building in public but spending too much time writing posts instead of writing code.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -60,12 +94,12 @@ import Layout from '../layouts/Layout.astro'
             <div class="text-[#ffb000] text-xs mb-3 tracking-wide">01 WIRE</div>
             <h3 class="text-white text-sm font-medium mb-2">Connect your content sources</h3>
             <p class="text-neutral-500 text-xs leading-relaxed mb-4">
-              Link your GitHub org, blog RSS, and changelog. Pressroom monitors your channels for publishable activity.
+              Point Pressroom at your GitHub org, blog RSS feed, and changelog URL. It watches for new releases, merged PRs, and published posts — anything your team ships that's worth talking about.
             </p>
             <ul class="text-xs text-neutral-600 space-y-1">
-              <li>github releases + commits</li>
-              <li>blog + changelog feeds</li>
-              <li>team member activity</li>
+              <li>github orgs, repos + releases</li>
+              <li>blog rss + changelog feeds</li>
+              <li>per-engineer activity tracking</li>
             </ul>
           </div>
 
@@ -74,11 +108,11 @@ import Layout from '../layouts/Layout.astro'
             <div class="text-[#ffb000] text-xs mb-3 tracking-wide">02 SCOUT</div>
             <h3 class="text-white text-sm font-medium mb-2">Track industry signals</h3>
             <p class="text-neutral-500 text-xs leading-relaxed mb-4">
-              Subscribe to subreddits, Hacker News keywords, and RSS feeds. Signals scored for relevance, noise filtered out.
+              Subscribe to subreddits, Hacker News keywords, and any RSS feed. Every signal is scored for relevance to your product and summarized — not just listed. Noise is filtered out before it reaches you.
             </p>
             <ul class="text-xs text-neutral-600 space-y-1">
               <li>reddit + hacker news monitoring</li>
-              <li>custom rss feeds</li>
+              <li>custom rss feeds + keywords</li>
               <li>semantic relevance scoring</li>
             </ul>
           </div>
@@ -88,11 +122,11 @@ import Layout from '../layouts/Layout.astro'
             <div class="text-[#ffb000] text-xs mb-3 tracking-wide">03 GENERATE</div>
             <h3 class="text-white text-sm font-medium mb-2">Draft content for review</h3>
             <p class="text-neutral-500 text-xs leading-relaxed mb-4">
-              AI drafts LinkedIn posts, blog content, release emails, and gist ideas. Written in your brand voice. Review everything, or set rules and let it run.
+              AI drafts LinkedIn posts, blog articles, release emails, and gist ideas — all in your brand voice. Review and edit everything before publishing, or configure rules and let Pressroom publish on autopilot.
             </p>
             <ul class="text-xs text-neutral-600 space-y-1">
               <li>linkedin + x posts</li>
-              <li>blog + release emails</li>
+              <li>blog articles + release emails</li>
               <li>gist suggestions per engineer</li>
             </ul>
           </div>
@@ -134,16 +168,60 @@ import Layout from '../layouts/Layout.astro'
       </div>
     </section>
 
+    <!-- Integrations -->
+    <section class="px-6 py-12 border-b border-neutral-800">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-xs text-[#7a5a00] mb-4 tracking-wide uppercase">Integrations</h2>
+        <p class="text-neutral-500 text-xs mb-8 max-w-xl">Pressroom connects to the tools your team already uses — pulling signals in, pushing content out.</p>
+
+        <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-px bg-neutral-800">
+          <div class="bg-[#0a0a0a] p-4 text-center">
+            <div class="text-white text-xs font-medium mb-1">GitHub</div>
+            <div class="text-neutral-600 text-[10px]">repos + releases</div>
+          </div>
+          <div class="bg-[#0a0a0a] p-4 text-center">
+            <div class="text-white text-xs font-medium mb-1">LinkedIn</div>
+            <div class="text-neutral-600 text-[10px]">post + schedule</div>
+          </div>
+          <div class="bg-[#0a0a0a] p-4 text-center">
+            <div class="text-white text-xs font-medium mb-1">X / Twitter</div>
+            <div class="text-neutral-600 text-[10px]">post + schedule</div>
+          </div>
+          <div class="bg-[#0a0a0a] p-4 text-center">
+            <div class="text-white text-xs font-medium mb-1">Reddit</div>
+            <div class="text-neutral-600 text-[10px]">signal monitoring</div>
+          </div>
+          <div class="bg-[#0a0a0a] p-4 text-center">
+            <div class="text-white text-xs font-medium mb-1">Hacker News</div>
+            <div class="text-neutral-600 text-[10px]">signal monitoring</div>
+          </div>
+          <div class="bg-[#0a0a0a] p-4 text-center">
+            <div class="text-white text-xs font-medium mb-1">RSS</div>
+            <div class="text-neutral-600 text-[10px]">any feed</div>
+          </div>
+          <div class="bg-[#0a0a0a] p-4 text-center">
+            <div class="text-white text-xs font-medium mb-1">Google GSC</div>
+            <div class="text-neutral-600 text-[10px]">seo + analytics</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Dogfood -->
     <section class="px-6 py-12 border-b border-neutral-800">
       <div class="max-w-5xl mx-auto">
         <div class="border-l-2 border-[#ffb000]/30 pl-6 py-1">
-          <h2 class="text-xs text-[#7a5a00] mb-2 tracking-wide uppercase">Dogfood</h2>
-          <p class="text-neutral-400 text-xs leading-relaxed">
-            Pressroom HQ runs on itself. This site is scanned by our own SEO auditor. Our blog is fed by our own signal intelligence pipeline.
-            Our team's GitHub activity generates our own gist suggestions.
-            <a href="https://app.pressroomhq.com" class="text-[#ffb000] hover:text-[#e09e00] transition-colors ml-1">See it in the app</a>
+          <h2 class="text-xs text-[#7a5a00] mb-3 tracking-wide uppercase">We run on Pressroom</h2>
+          <p class="text-neutral-400 text-xs leading-relaxed mb-3">
+            Pressroom HQ is built and marketed by its own pipeline. This site's SEO is audited by our own scanner.
+            Our LinkedIn posts are drafted from our own GitHub activity. Our signal scout tracks the same channels we recommend to customers.
           </p>
+          <ul class="text-neutral-500 text-xs space-y-1 mb-3">
+            <li class="flex items-start gap-2"><span class="text-[#7a5a00]">&#8226;</span> SEO audits on pressroomhq.com — generated by Pressroom</li>
+            <li class="flex items-start gap-2"><span class="text-[#7a5a00]">&#8226;</span> LinkedIn posts about our releases — drafted by Pressroom</li>
+            <li class="flex items-start gap-2"><span class="text-[#7a5a00]">&#8226;</span> AI visibility tracking for &ldquo;content ops&rdquo; — monitored by Pressroom</li>
+          </ul>
+          <a href="https://app.pressroomhq.com" class="text-[#ffb000] hover:text-[#e09e00] transition-colors text-xs">See it live in the app &rarr;</a>
         </div>
       </div>
     </section>
@@ -186,10 +264,11 @@ import Layout from '../layouts/Layout.astro'
         PRESSROOM HQ
       </a>
       <nav aria-label="Footer navigation" class="flex gap-6">
-        <a href="/docs" class="hover:text-neutral-400 transition-colors">Docs</a>
-        <a href="/blog" class="hover:text-neutral-400 transition-colors">Blog</a>
+        <a href="/docs/" class="hover:text-neutral-400 transition-colors">Docs</a>
+        <a href="/blog/" class="hover:text-neutral-400 transition-colors">Blog</a>
         <a href="https://app.pressroomhq.com" class="hover:text-neutral-400 transition-colors">App</a>
         <a href="https://github.com/pressroomhq" class="hover:text-neutral-400 transition-colors">GitHub</a>
+        <a href="https://www.linkedin.com/company/pressroom-hq" class="hover:text-neutral-400 transition-colors">LinkedIn</a>
       </nav>
       <span>2026 Pressroom HQ</span>
     </div>
@@ -197,13 +276,17 @@ import Layout from '../layouts/Layout.astro'
 </Layout>
 
 <script>
-  document.getElementById('waitlist-form')!.addEventListener('submit', (e) => {
-    e.preventDefault()
-    const email = (document.getElementById('waitlist-email') as HTMLInputElement).value
-    const msg = document.getElementById('waitlist-msg')!
-    // TODO: wire to Supabase or similar after auth migration
-    msg.textContent = `Received. We'll contact ${email} when ready.`
-    msg.style.display = 'block'
-    ;(e.target as HTMLFormElement).reset()
+  document.addEventListener('astro:page-load', () => {
+    const form = document.getElementById('waitlist-form')
+    if (!form) return
+    form.addEventListener('submit', (e) => {
+      e.preventDefault()
+      const email = (document.getElementById('waitlist-email') as HTMLInputElement).value
+      const msg = document.getElementById('waitlist-msg')!
+      // TODO: wire to Supabase or similar after auth migration
+      msg.textContent = `Received. We'll contact ${email} when ready.`
+      msg.style.display = 'block'
+      ;(e.target as HTMLFormElement).reset()
+    })
   })
 </script>

@@ -3,7 +3,7 @@ import Layout from '../../layouts/Layout.astro'
 import { getCollection } from 'astro:content'
 
 const posts = (await getCollection('blog')).sort(
-  (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+  (a, b) => b.data.date.localeCompare(a.data.date)
 )
 ---
 
@@ -16,7 +16,7 @@ const posts = (await getCollection('blog')).sort(
           PRESSROOM HQ
         </a>
         <div class="hidden sm:flex items-center gap-6 text-xs">
-          <a href="/docs" class="text-[#7a5a00] hover:text-[#ffb000] transition-colors uppercase tracking-wide">Docs</a>
+          <a href="/docs/" class="text-[#7a5a00] hover:text-[#ffb000] transition-colors uppercase tracking-wide">Docs</a>
           <span class="text-[#ffb000] uppercase tracking-wide">Blog</span>
           <a href="/#access" class="text-[#ffb000] border border-[#ffb000]/40 px-3 py-1 hover:bg-[#ffb000]/10 transition-colors uppercase tracking-wide">Request Access</a>
         </div>
@@ -58,10 +58,11 @@ const posts = (await getCollection('blog')).sort(
         PRESSROOM HQ
       </a>
       <nav aria-label="Footer navigation" class="flex gap-6">
-        <a href="/docs" class="hover:text-neutral-400 transition-colors">Docs</a>
+        <a href="/docs/" class="hover:text-neutral-400 transition-colors">Docs</a>
         <span class="text-neutral-400">Blog</span>
         <a href="https://app.pressroomhq.com" class="hover:text-neutral-400 transition-colors">App</a>
         <a href="https://github.com/pressroomhq" class="hover:text-neutral-400 transition-colors">GitHub</a>
+        <a href="https://www.linkedin.com/company/pressroom-hq" class="hover:text-neutral-400 transition-colors">LinkedIn</a>
       </nav>
       <span>2026 Pressroom HQ</span>
     </div>
