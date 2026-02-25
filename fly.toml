@@ -2,6 +2,9 @@ app = "pressroom-site"
 primary_region = "sjc"
 
 [build]
+  [build.args]
+    PUBLIC_SUPABASE_URL = "https://vriwztswqyhowqejlgqt.supabase.co"
+    PUBLIC_SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZyaXd6dHN3cXlob3dxZWpsZ3F0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzE5OTQzMzIsImV4cCI6MjA4NzU3MDMzMn0.yX5IAOLurPHdP4TSvArVMmAaOLXK9nuLA-NYMI0JIko"
 
 [http_service]
   internal_port = 8080
