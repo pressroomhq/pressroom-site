@@ -7,7 +7,7 @@ const posts = (await getCollection('blog')).sort(
 )
 ---
 
-<Layout title="Blog — Pressroom HQ" description="Technical content, release notes, and industry signals from the Pressroom HQ team.">
+<Layout title="Developer Content Operations Blog — Pressroom HQ" description="Explore developer content operations guides, AI publishing automation tutorials, release note templates, and GitHub workflow insights from the Pressroom HQ team.">
   <header>
     <nav class="border-b border-neutral-800 px-6 py-3" aria-label="Main navigation">
       <div class="max-w-5xl mx-auto flex items-center justify-between">
@@ -27,7 +27,16 @@ const posts = (await getCollection('blog')).sort(
 
   <main class="px-6 py-12">
     <div class="max-w-5xl mx-auto">
-      <h1 class="text-xs text-[#7a5a00] mb-8 tracking-wide uppercase">Blog</h1>
+      <h1 class="text-xs text-[#7a5a00] mb-8 tracking-wide uppercase">Pressroom HQ Technical Blog</h1>
+
+      <div class="mb-10 max-w-2xl">
+        <p class="text-sm text-neutral-400 leading-relaxed">
+          Welcome to the Pressroom HQ blog — your resource for technical deep-dives on AI content automation, GitHub-triggered publishing workflows, release note generation, and developer relations content strategy. Our team shares hands-on guides, workflow templates, and industry signals to help engineering and DevRel teams ship better content faster. Whether you're automating changelog generation, building AI-assisted publishing pipelines, or optimizing docs for search and AI citation engines, you'll find actionable insights here. Browse the latest posts below, or subscribe to get new articles delivered to your inbox.
+        </p>
+        <div class="mt-6">
+          <a href="/#access" class="inline-block text-xs text-[#ffb000] border border-[#ffb000]/40 px-4 py-2 hover:bg-[#ffb000]/10 transition-colors uppercase tracking-wide">Subscribe for updates</a>
+        </div>
+      </div>
 
       {posts.length === 0 ? (
         <div class="border border-neutral-800 px-6 py-8">
@@ -67,4 +76,26 @@ const posts = (await getCollection('blog')).sort(
       <span>2026 Pressroom HQ</span>
     </div>
   </footer>
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Pressroom HQ Blog",
+    "description": "Technical content, release notes, and industry signals from the Pressroom HQ team.",
+    "url": "https://pressroomhq.com/blog",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Pressroom HQ",
+      "url": "https://pressroomhq.com"
+    },
+    "blogPost": posts.map((post) => ({
+      "@type": "BlogPosting",
+      "headline": post.data.title,
+      "datePublished": post.data.date,
+      "author": {
+        "@type": "Person",
+        "name": post.data.author ?? "Pressroom HQ Team"
+      },
+      "url": `https://pressroomhq.com/blog/${post.id}`
+    }))
+  })} />
 </Layout>
