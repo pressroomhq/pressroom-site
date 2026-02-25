@@ -7,12 +7,36 @@ const posts = (await getCollection('blog')).sort(
 )
 ---
 
-<Layout title="Blog — Pressroom HQ" description="Technical content, release notes, and industry signals from the Pressroom HQ team.">
+<Layout title="Developer Blog — AI Content & GitHub Insights | Pressroom HQ" description="Technical content, release notes, and industry signals from the Pressroom HQ team.">
+  <script type="application/ld+json" slot="head">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "Pressroom HQ Developer Blog",
+      "description": "Technical content, release notes, and industry signals from the Pressroom HQ team.",
+      "url": "https://pressroomhq.com/blog",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Pressroom HQ",
+        "url": "https://pressroomhq.com"
+      }
+    }
+  </script>
+  <script type="application/ld+json" slot="head">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://pressroomhq.com"},
+        {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://pressroomhq.com/blog"}
+      ]
+    }
+  </script>
   <header>
     <nav class="border-b border-neutral-800 px-6 py-3" aria-label="Main navigation">
       <div class="max-w-5xl mx-auto flex items-center justify-between">
         <a href="/" class="flex items-center gap-2 text-[#ffb000] font-semibold tracking-tight text-sm" aria-label="Pressroom HQ home">
-          <img src="/logo-icon-128.png" alt="" class="h-6 w-6" />
+          <img src="/logo-icon-128.png" alt="Pressroom HQ developer blog — AI content operations and GitHub publishing insights" class="h-6 w-6" />
           PRESSROOM HQ
         </a>
         <div class="hidden sm:flex items-center gap-6 text-xs">
@@ -28,6 +52,47 @@ const posts = (await getCollection('blog')).sort(
   <main class="px-6 py-12">
     <div class="max-w-5xl mx-auto">
       <h1 class="text-xs text-[#7a5a00] mb-8 tracking-wide uppercase">Blog</h1>
+
+      <div class="mb-12 max-w-3xl">
+        <p class="text-white text-lg font-semibold mb-4">Your team ships code every week. Your content pipeline should keep up.</p>
+        <p class="text-neutral-400 text-sm leading-relaxed mb-4">
+          Most developer teams produce more publishable material in a single sprint than their content team can handle in a month. Pull requests merge, features ship, bugs get squashed — and none of it ever becomes a blog post, a LinkedIn update, or a release note that customers actually read. The Pressroom HQ blog exists to change that.
+        </p>
+        <p class="text-neutral-400 text-sm leading-relaxed mb-4">
+          Here you'll find practical writing on AI content operations, GitHub-driven publishing workflows, and developer productivity. We cover the intersection of engineering velocity and content strategy — because the teams shipping the best products deserve to be heard, not just found on GitHub.
+        </p>
+        <p class="text-neutral-400 text-sm leading-relaxed">
+          Whether you're a solo founder trying to stay visible between releases or a developer relations team managing a high-volume content calendar, this blog is built for you. We write about what we know: running a content pipeline that moves at the speed of code.
+        </p>
+      </div>
+
+      <div class="mb-12">
+        <h2 class="text-xs text-[#7a5a00] mb-4 tracking-wide uppercase border-b border-neutral-800 pb-2">Release Notes &amp; Product Updates</h2>
+        <p class="text-neutral-400 text-sm leading-relaxed mb-4">
+          Every release deserves an audience. This section covers how to write release notes that engineers respect and customers actually read. We walk through the mechanics of automated changelog generation from GitHub activity, how to structure update announcements for different channels, and what separates a release note that builds trust from one that gets ignored. Product updates are your most credible content — learn to use them.
+        </p>
+      </div>
+
+      <div class="mb-12">
+        <h2 class="text-xs text-[#7a5a00] mb-4 tracking-wide uppercase border-b border-neutral-800 pb-2">Developer Content Strategy</h2>
+        <p class="text-neutral-400 text-sm leading-relaxed mb-4">
+          Content strategy for developer tools is different. Your audience can read your source code. They will notice if your docs are stale, your blog is ghost-written, or your posts don't match what your product actually does. This section covers how to build a content strategy rooted in authenticity — one that starts with your GitHub history, your team's real expertise, and the problems your users are actually solving. We cover editorial planning, technical SEO for developer-focused sites, and how to turn engineering output into content that ranks.
+        </p>
+      </div>
+
+      <div class="mb-12">
+        <h2 class="text-xs text-[#7a5a00] mb-4 tracking-wide uppercase border-b border-neutral-800 pb-2">AI &amp; Automation Insights</h2>
+        <p class="text-neutral-400 text-sm leading-relaxed mb-4">
+          AI is changing how content gets made — but not in the ways most people expect. This section cuts through the hype and focuses on what's actually working for developer teams in 2025 and beyond. We cover prompt engineering for technical content, how to use LLMs to accelerate drafting without losing your brand voice, AI visibility monitoring (how LLMs describe your product), and automation workflows that keep humans in the loop where it counts. We eat our own dog food here — Pressroom HQ uses AI to run its own content pipeline.
+        </p>
+      </div>
+
+      <div class="mb-12 border border-neutral-800 px-6 py-6">
+        <h2 class="text-xs text-[#7a5a00] mb-3 tracking-wide uppercase">Stay in the Loop</h2>
+        <p class="text-neutral-400 text-sm leading-relaxed mb-4">
+          We publish when we have something worth saying — new workflows, lessons from running our own content pipeline, and tactical guides for developer teams. Follow us on <a href="https://linkedin.com/company/pressroomhq" class="text-[#ffb000] hover:text-[#e09e00] transition-colors">LinkedIn</a> for shorter-form updates between posts. If you want to see how Pressroom HQ connects to your GitHub org and starts generating content, the <a href="/docs" class="text-[#ffb000] hover:text-[#e09e00] transition-colors">setup docs</a> are the right place to start.
+        </p>
+      </div>
 
       {posts.length === 0 ? (
         <div class="border border-neutral-800 px-6 py-8">
@@ -54,7 +119,7 @@ const posts = (await getCollection('blog')).sort(
   <footer class="border-t border-neutral-800 px-6 py-6 mt-auto">
     <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs text-neutral-600">
       <a href="/" class="flex items-center gap-1.5 text-[#7a5a00] hover:text-[#ffb000] transition-colors">
-        <img src="/logo-icon-128.png" alt="" class="h-4 w-4" />
+        <img src="/logo-icon-128.png" alt="Pressroom HQ team sharing developer productivity and content automation articles" class="h-4 w-4" />
         PRESSROOM HQ
       </a>
       <nav aria-label="Footer navigation" class="flex gap-6">

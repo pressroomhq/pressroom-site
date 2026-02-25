@@ -2,13 +2,40 @@
 import Layout from '../layouts/Layout.astro'
 ---
 
-<Layout>
+<Layout title="Pressroom HQ — AI Content Ops for Developers" description="Monitor GitHub activity and auto-draft LinkedIn posts with AI. Content operations platform built for developer teams.">
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json" slot="head">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Pressroom HQ",
+      "description": "AI-powered content operations for developer teams. Monitor GitHub activity, auto-draft LinkedIn posts.",
+      "url": "https://pressroomhq.com",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+  </script>
+  <script type="application/ld+json" slot="head">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Pressroom HQ",
+      "url": "https://pressroomhq.com",
+      "logo": "https://pressroomhq.com/logo-icon-128.png"
+    }
+  </script>
+
   <!-- Nav -->
   <header>
     <nav class="border-b border-neutral-800 px-6 py-3" aria-label="Main navigation">
       <div class="max-w-5xl mx-auto flex items-center justify-between">
         <a href="/" class="flex items-center gap-2 text-[#ffb000] font-semibold tracking-tight text-sm" aria-label="Pressroom HQ home">
-          <img src="/logo-icon-128.png" alt="" class="h-6 w-6" />
+          <img src="/logo-icon-128.png" alt="GitHub to LinkedIn content automation workflow in Pressroom HQ" class="h-6 w-6" />
           PRESSROOM HQ
         </a>
         <div class="hidden sm:flex items-center gap-6 text-xs">
@@ -36,6 +63,7 @@ import Layout from '../layouts/Layout.astro'
         <p class="text-neutral-400 text-sm max-w-xl mb-8 leading-relaxed">
           Monitors your GitHub activity, blog, and industry signals. Drafts LinkedIn posts,
           release notes, and technical content. Nothing publishes without your review — unless you tell it to.
+          Learn more about our <a href="/docs" class="text-[#ffb000] hover:text-[#e09e00] transition-colors">content operations</a> setup.
         </p>
 
         <div class="flex gap-3">
@@ -44,6 +72,12 @@ import Layout from '../layouts/Layout.astro'
           </a>
           <a href="https://app.pressroomhq.com" class="border border-neutral-700 text-neutral-400 px-5 py-2 text-xs hover:border-neutral-500 hover:text-neutral-200 transition-colors uppercase tracking-wide">
             Open App
+          </a>
+          <a href="/docs" title="Pressroom HQ setup and configuration guides" class="border border-neutral-700 text-neutral-400 px-5 py-2 text-xs hover:border-neutral-500 hover:text-neutral-200 transition-colors uppercase tracking-wide">
+            Read the docs
+          </a>
+          <a href="/blog" title="Developer content operations insights" class="border border-neutral-700 text-neutral-400 px-5 py-2 text-xs hover:border-neutral-500 hover:text-neutral-200 transition-colors uppercase tracking-wide">
+            See our blog
           </a>
         </div>
       </div>
@@ -182,7 +216,7 @@ import Layout from '../layouts/Layout.astro'
   <footer class="border-t border-neutral-800 px-6 py-6">
     <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs text-neutral-600">
       <a href="/" class="flex items-center gap-1.5 text-[#7a5a00] hover:text-[#ffb000] transition-colors">
-        <img src="/logo-icon-128.png" alt="" class="h-4 w-4" />
+        <img src="/logo-icon-128.png" alt="Pressroom HQ dashboard showing AI-drafted LinkedIn posts from GitHub activity" class="h-4 w-4" />
         PRESSROOM HQ
       </a>
       <nav aria-label="Footer navigation" class="flex gap-6">
