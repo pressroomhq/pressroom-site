@@ -16,7 +16,19 @@ for (const section of Object.keys(sections)) {
 const sectionNames = Object.keys(sections).sort()
 ---
 
-<DocsPage title="Documentation" description="Pressroom HQ documentation. Guides for setup, configuration, content pipelines, SEO auditing, and API reference.">
+<DocsPage title="Docs & Setup Guides — Pressroom HQ" description="Complete guide to setting up Pressroom HQ: GitHub integration, content pipeline configuration, SEO auditing tools, and API reference for developer teams.">
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Pressroom HQ Documentation",
+    "description": "Guides for setup, configuration, content pipelines, SEO auditing, and API integration.",
+    "url": "https://pressroomhq.com/docs",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Pressroom HQ",
+      "url": "https://pressroomhq.com"
+    }
+  })} />
   <h1 class="text-xs text-[#7a5a00] mb-8 tracking-wide uppercase">Documentation</h1>
 
   {allDocs.length === 0 ? (
