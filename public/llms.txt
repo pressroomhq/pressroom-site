@@ -1,0 +1,40 @@
+# Pressroom HQ
+
+Pressroom HQ is an AI-powered content operations platform for developer tools companies. It turns product signals (GitHub commits, release notes, support tickets, industry trends) into publish-ready content across blogs, LinkedIn, newsletters, and video — with built-in SEO auditing, GEO (Generative Engine Optimization), and a Claude-powered editorial engine.
+
+## Main Site
+
+- [Pressroom HQ Homepage](https://pressroomhq.com): Main product page — overview of the AI content operations platform for developer marketing teams.
+
+## Documentation
+
+- [Getting Started](https://pressroomhq.com/docs/getting-started): Quick-start guide for onboarding your company, connecting signals, and generating your first content.
+- [Architecture](https://pressroomhq.com/docs/architecture): Technical architecture overview — signal ingestion, story workbench, engine pipeline, and publishing flow.
+- [API Reference](https://pressroomhq.com/docs/api-reference): REST API documentation for programmatic access to content, signals, stories, audits, and settings.
+- [MCP Setup](https://pressroomhq.com/docs/mcp-setup): How to connect Pressroom HQ to Claude Desktop, Cursor, or other MCP-compatible AI tools.
+- [MCP Tools](https://pressroomhq.com/docs/mcp-tools): Full reference for all MCP tool capabilities — generate, scout, audit, publish, and more.
+
+## Guides
+
+- [Content Pipeline](https://pressroomhq.com/docs/guides-content-pipeline): End-to-end guide for the signal → story → content → publish workflow.
+- [Scout & Signals](https://pressroomhq.com/docs/guides-scout-and-signals): How to discover and ingest signals from Reddit, Hacker News, RSS, and web sources.
+- [SEO & Audits](https://pressroomhq.com/docs/guides-seo-and-audits): Deep SEO auditing with deterministic scoring, action items, and automated fix-with-PR.
+- [AI Visibility (GEO)](https://pressroomhq.com/docs/guides-ai-visibility): Generative Engine Optimization — llms.txt, robots.txt AI directives, and citation readiness.
+- [Blog & Publishing](https://pressroomhq.com/docs/guides-blog-and-publishing): Publishing workflows for blog posts, Medium, LinkedIn, and newsletter channels.
+- [Story Workbench](https://pressroomhq.com/docs/guides-story-workbench): How to create, curate, and manage editorial stories from signals.
+- [Voice & Skills](https://pressroomhq.com/docs/guides-voice-and-skills): Voice persona configuration and custom skill prompts for the Claude engine.
+- [Video Studio](https://pressroomhq.com/docs/guides-video-studio): YouTube script generation, OBS rendering, and video publishing pipeline.
+- [GSC Integration](https://pressroomhq.com/docs/guides-gsc-integration): Google Search Console OAuth setup and performance analytics.
+- [Integrations](https://pressroomhq.com/docs/guides-integrations): Slack notifications, Medium publishing, and third-party connections.
+
+## Blog
+
+- [Blog Index](https://pressroomhq.com/blog): Latest articles on developer marketing, content operations, SEO, and AI-powered publishing.
+- [SEO Is Just Good GEO with a 30-Year Head Start](https://pressroomhq.com/blog/seo-is-just-good-geo-with-a-30-year-head-start-heres-what-that-means-for-develop): Why traditional SEO and Generative Engine Optimization are converging.
+- [The $1K MRR Ceiling Is a Distribution Problem](https://pressroomhq.com/blog/the-1k-mrr-ceiling-is-a-distribution-problem-not-a-product-problem): Why developer tools stall at $1K MRR and how content operations fix it.
+- [Your Changelog Is a Graveyard for Good Content](https://pressroomhq.com/blog/your-changelog-is-a-graveyard-for-good-content): Turning release notes and changelogs into marketing content.
+
+## Contact
+
+- Product: https://pressroomhq.com
+- Documentation: https://pressroomhq.com/docs
