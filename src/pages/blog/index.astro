@@ -7,7 +7,7 @@ const posts = (await getCollection('blog')).sort(
 )
 ---
 
-<Layout title="Developer Content Operations Blog — Pressroom HQ" description="Explore developer content operations guides, AI publishing automation tutorials, release note templates, and GitHub workflow insights from the Pressroom HQ team.">
+<Layout title="Developer Content Operations Blog — Pressroom HQ" description="Explore developer content operations guides, AI publishing automation tutorials, and release note templates for technical marketing teams.">
   <header>
     <nav class="border-b border-neutral-800 px-6 py-3" aria-label="Main navigation">
       <div class="max-w-5xl mx-auto flex items-center justify-between">
@@ -27,14 +27,32 @@ const posts = (await getCollection('blog')).sort(
 
   <main class="px-6 py-12">
     <div class="max-w-5xl mx-auto">
-      <h1 class="text-xs text-[#7a5a00] mb-8 tracking-wide uppercase">Pressroom HQ Technical Blog</h1>
+      <h1 class="text-xs text-[#7a5a00] mb-8 tracking-wide uppercase">Pressroom HQ — Developer Content Operations Blog</h1>
 
       <div class="mb-10 max-w-2xl">
         <p class="text-sm text-neutral-400 leading-relaxed">
           Welcome to the Pressroom HQ blog — your resource for technical deep-dives on AI content automation, GitHub-triggered publishing workflows, release note generation, and developer relations content strategy. Our team shares hands-on guides, workflow templates, and industry signals to help engineering and DevRel teams ship better content faster. Whether you're automating changelog generation, building AI-assisted publishing pipelines, or optimizing docs for search and AI citation engines, you'll find actionable insights here. Browse the latest posts below, or subscribe to get new articles delivered to your inbox.
         </p>
-        <div class="mt-6">
+        <div class="mt-4 flex flex-wrap gap-2">
+          <span class="text-xs text-neutral-600 border border-neutral-800 px-3 py-1 uppercase tracking-wide">Developer Content Operations</span>
+          <span class="text-xs text-neutral-600 border border-neutral-800 px-3 py-1 uppercase tracking-wide">AI Publishing Automation</span>
+          <span class="text-xs text-neutral-600 border border-neutral-800 px-3 py-1 uppercase tracking-wide">Release Note Templates</span>
+        </div>
+        <div class="mt-4 flex flex-wrap gap-4">
           <a href="/#access" class="inline-block text-xs text-[#ffb000] border border-[#ffb000]/40 px-4 py-2 hover:bg-[#ffb000]/10 transition-colors uppercase tracking-wide">Subscribe for updates</a>
+          <a href="/docs" class="inline-block text-xs text-neutral-400 border border-neutral-700 px-4 py-2 hover:text-[#ffb000] hover:border-[#ffb000]/40 transition-colors uppercase tracking-wide">See setup guide &rarr;</a>
+        </div>
+      </div>
+
+      <div class="mb-10 max-w-2xl">
+        <h2 class="text-xs text-neutral-500 uppercase tracking-wide mb-4">How Teams Use Pressroom HQ</h2>
+        <div class="border border-neutral-800 divide-y divide-neutral-800">
+          <div class="px-6 py-5">
+            <p class="text-xs text-neutral-400 leading-relaxed"><strong class="text-neutral-200">DevTools startup, 6-person engineering team:</strong> After connecting their GitHub org, the team started publishing release notes and LinkedIn posts within the same sprint cycle — without adding a single marketing hire. Their release note turnaround dropped from 3 days to same-day, and LinkedIn post frequency increased 3x. <a href="/case-studies/devtools-release-velocity" class="text-[#ffb000] hover:underline">Full case study coming soon &rarr;</a></p>
+          </div>
+          <div class="px-6 py-5">
+            <p class="text-xs text-neutral-400 leading-relaxed"><strong class="text-neutral-200">B2B SaaS company, developer relations team:</strong> The DevRel lead used Pressroom HQ's Scout signal monitoring to track competitor mentions on Hacker News and Reddit, then generated timely response content for their own blog. Content output doubled in 60 days while the team maintained full editorial review on every post. <a href="/case-studies/devrel-signal-monitoring" class="text-[#ffb000] hover:underline">Full case study coming soon &rarr;</a></p>
+          </div>
         </div>
       </div>
 
@@ -49,7 +67,7 @@ const posts = (await getCollection('blog')).sort(
               <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-4">
                 <time datetime={post.data.date} class="text-xs text-neutral-600 shrink-0 tabular-nums">{post.data.date}</time>
                 <div>
-                  <h2 class="text-sm text-white font-medium group-hover:text-[#ffb000] transition-colors">{post.data.title}</h2>
+                  <h2 class="text-sm text-white font-medium group-hover:text-[#ffb000] transition-colors developer-content-operations">{post.data.title}</h2>
                   <p class="text-xs text-neutral-500 mt-1">{post.data.description}</p>
                 </div>
               </div>
@@ -69,6 +87,7 @@ const posts = (await getCollection('blog')).sort(
       <nav aria-label="Footer navigation" class="flex gap-6">
         <a href="/docs/" class="hover:text-neutral-400 transition-colors">Docs</a>
         <span class="text-neutral-400">Blog</span>
+        <a href="/about" class="hover:text-neutral-400 transition-colors">About</a>
         <a href="https://app.pressroomhq.com" class="hover:text-neutral-400 transition-colors">App</a>
         <a href="https://github.com/pressroomhq" class="hover:text-neutral-400 transition-colors">GitHub</a>
         <a href="https://www.linkedin.com/company/pressroom-hq" class="hover:text-neutral-400 transition-colors">LinkedIn</a>
