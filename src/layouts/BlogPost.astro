@@ -13,6 +13,24 @@ const { title, description, date, author, tags } = Astro.props
 ---
 
 <Layout title={`${title} — Pressroom HQ`} description={description}>
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": title,
+    "description": description,
+    "datePublished": date,
+    "author": {
+      "@type": "Person",
+      "name": author ?? "Pressroom HQ Team",
+      "url": "https://pressroomhq.com/about"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Pressroom HQ",
+      "url": "https://pressroomhq.com"
+    },
+    "url": `https://pressroomhq.com/blog/${Astro.url.pathname.replace(/^\/blog\//, '').replace(/\/$/, '')}`
+  })} />
   <header>
     <nav class="border-b border-neutral-800 px-6 py-3" aria-label="Main navigation">
       <div class="max-w-5xl mx-auto flex items-center justify-between">
@@ -34,8 +52,11 @@ const { title, description, date, author, tags } = Astro.props
         <a href="/blog/" class="text-xs text-[#7a5a00] hover:text-[#ffb000] transition-colors uppercase tracking-wide mb-4 inline-block">&larr; Back to blog</a>
         <h1 class="text-2xl sm:text-3xl font-bold text-white leading-snug mb-3">{title}</h1>
         <div class="flex flex-wrap items-center gap-4 text-xs text-neutral-500">
-          <time datetime={date}>{date}</time>
-          {author && <span>{author}</span>}
+          <time datetime={date}>{new Date(date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+          {author
+            ? <span>by <a href="/about" class="text-[#7a5a00] hover:text-[#ffb000] transition-colors">{author}</a></span>
+            : <span>by <a href="/about" class="text-[#7a5a00] hover:text-[#ffb000] transition-colors">Pressroom HQ Team</a></span>
+          }
           {tags && tags.length > 0 && (
             <div class="flex gap-2">
               {tags.map((tag) => (
@@ -49,6 +70,10 @@ const { title, description, date, author, tags } = Astro.props
       <div class="prose">
         <slot />
       </div>
+
+      <div class="mt-12 pt-8 border-t border-neutral-800">
+        <p class="text-sm text-neutral-400">Want to automate your developer content pipeline? <a href="/docs" class="text-[#ffb000] hover:underline">Read the setup guide &rarr;</a></p>
+      </div>
     </article>
   </main>
 
@@ -61,6 +86,7 @@ const { title, description, date, author, tags } = Astro.props
       <nav aria-label="Footer navigation" class="flex gap-6">
         <a href="/docs/" class="hover:text-neutral-400 transition-colors">Docs</a>
         <a href="/blog/" class="hover:text-neutral-400 transition-colors">Blog</a>
+        <a href="/about" class="hover:text-neutral-400 transition-colors">About</a>
         <a href="https://app.pressroomhq.com" class="hover:text-neutral-400 transition-colors">App</a>
         <a href="https://github.com/pressroomhq" class="hover:text-neutral-400 transition-colors">GitHub</a>
         <a href="https://www.linkedin.com/company/pressroom-hq" class="hover:text-neutral-400 transition-colors">LinkedIn</a>

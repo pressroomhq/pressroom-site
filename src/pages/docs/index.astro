@@ -16,7 +16,53 @@ for (const section of Object.keys(sections)) {
 const sectionNames = Object.keys(sections).sort()
 ---
 
-<DocsPage title="Docs & Setup Guides — Pressroom HQ" description="Complete guide to setting up Pressroom HQ: GitHub integration, content pipeline configuration, SEO auditing tools, and API reference for developer teams.">
+<DocsPage title="Docs & Setup Guides — Pressroom HQ" description="Complete guide to setting up Pressroom HQ: GitHub integration, content pipeline configuration, SEO automation, and multi-channel publishing for developer teams.">
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I connect my GitHub repository to Pressroom HQ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Navigate to Settings in Pressroom HQ, select GitHub Integration, and authorize the GitHub App. Choose the repositories you want to monitor. Pressroom HQ will then detect new commits, releases, and pull merges automatically. See the full GitHub integration guide at https://pressroomhq.com/docs for step-by-step instructions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What content formats does Pressroom HQ generate?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pressroom HQ generates LinkedIn posts, tweets, blog drafts, and release notes from your GitHub activity. Each format is optimized for its target channel and can be reviewed and edited before publishing."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does Pressroom HQ use AI to generate content?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pressroom HQ uses large language models to analyze your commit messages, pull request descriptions, and release tags, then drafts human-readable content summaries. You review and approve each piece before it is published."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I customize the tone and style of generated content?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Pressroom HQ supports custom tone profiles and brand voice settings. You can configure formality level, preferred terminology, and output length for each content channel in your workspace settings."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which publishing channels does Pressroom HQ support?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pressroom HQ currently supports publishing to LinkedIn, Twitter/X, your blog (via markdown export or CMS webhook), and release notes pages. Additional channel integrations are on the roadmap."
+        }
+      }
+    ]
+  })} />
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "TechArticle",
@@ -30,6 +76,39 @@ const sectionNames = Object.keys(sections).sort()
     }
   })} />
   <h1 class="text-xs text-[#7a5a00] mb-8 tracking-wide uppercase">Documentation</h1>
+
+  <div class="mb-10 max-w-2xl space-y-6 text-xs text-neutral-400 leading-relaxed">
+    <div>
+      <h2 class="text-xs text-neutral-500 uppercase tracking-wide mb-3">What You'll Learn</h2>
+      <p class="mb-2"><strong class="text-neutral-300">Getting Started &amp; Architecture:</strong> Learn how to connect your GitHub organization, configure the content pipeline, and understand how Pressroom HQ's event-driven architecture moves data from commit to published post. These guides walk you through every setting so you're never guessing.</p>
+      <p class="mb-2"><strong class="text-neutral-300">MCP Setup &amp; API Reference:</strong> Integrate Pressroom HQ into your existing toolchain using the Model Context Protocol. The API reference covers every endpoint, authentication method, and webhook payload so your engineering team can automate approvals, trigger pipelines programmatically, and pull metrics into internal dashboards.</p>
+      <p class="mb-2"><strong class="text-neutral-300">Content Guides &amp; Publishing Workflows:</strong> Step-by-step guides for the content pipeline, Scout signal monitoring, SEO auditing, AI visibility optimization, and multi-channel publishing. Each guide is written for developer teams who need practical configuration examples, not abstract overviews.</p>
+    </div>
+
+    <div>
+      <h2 class="text-xs text-neutral-500 uppercase tracking-wide mb-3">Getting Started in 5 Minutes</h2>
+      <p class="mb-2">You can have Pressroom HQ monitoring your GitHub repository and generating your first draft in under five minutes. Start with the <a href="/docs/getting-started" class="text-[#ffb000] hover:underline">Getting Started guide</a> to authorize the GitHub App and select your repos. Then open <a href="/docs/guides-content-pipeline" class="text-[#ffb000] hover:underline">Content Pipeline configuration</a> to set your brand voice, output formats, and review workflow. For teams that want to connect Pressroom HQ to an external tool or CI/CD step, the <a href="/docs/mcp-setup" class="text-[#ffb000] hover:underline">MCP Setup guide</a> covers the full integration path.</p>
+      <p>Every piece of generated content lands in a review queue before it publishes — so the fastest way to get value is to connect a repo, let one release cycle run, and review the first batch of drafts your team receives.</p>
+    </div>
+
+    <div>
+      <h2 class="text-xs text-neutral-500 uppercase tracking-wide mb-3">Common Questions</h2>
+      <div class="space-y-4">
+        <div>
+          <p class="text-neutral-300 font-medium mb-1">Do I need to write prompts or templates to get started?</p>
+          <p>No. Pressroom HQ ships with sensible defaults for LinkedIn posts, release notes, and blog drafts. You can customize tone profiles and brand voice settings after your first drafts are generated. See the <a href="/docs/guides-content-pipeline" class="text-[#ffb000] hover:underline">Content Pipeline guide</a> for all available options.</p>
+        </div>
+        <div>
+          <p class="text-neutral-300 font-medium mb-1">Which GitHub events trigger content generation?</p>
+          <p>New releases, merged pull requests, and commit pushes to watched branches all trigger the pipeline. You can configure which event types generate which content formats — for example, only generating LinkedIn posts for tagged releases, not every merge. Full event configuration is covered in the <a href="/docs/architecture" class="text-[#ffb000] hover:underline">Architecture guide</a>.</p>
+        </div>
+        <div>
+          <p class="text-neutral-300 font-medium mb-1">Can I connect multiple repositories or GitHub organizations?</p>
+          <p>Yes. Pressroom HQ supports multiple repos and orgs under a single workspace. Each repo can have its own content settings, or you can apply workspace-wide defaults. The <a href="/docs/getting-started" class="text-[#ffb000] hover:underline">Getting Started guide</a> walks through authorizing the GitHub App for multi-repo setups.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
   {allDocs.length === 0 ? (
     <div class="border border-neutral-800 px-6 py-8">

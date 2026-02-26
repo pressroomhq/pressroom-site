@@ -4,13 +4,59 @@ import Layout from '../layouts/Layout.astro'
 
 <Layout
   title="Pressroom HQ: AI Content Ops for Developers"
-  description="Pressroom HQ monitors GitHub activity and industry signals, then drafts LinkedIn posts, tweets, and newsletters automatically. Built for developer teams."
+  description="Pressroom HQ monitors GitHub activity and industry signals, then drafts LinkedIn posts, tweets, and blog content — reviewed and shipped by your team."
 >
   <!-- Nav -->
   <head>
-    <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"HowTo","name":"How Pressroom HQ Works","step":[{"@type":"HowToStep","name":"Connect GitHub","text":"Link your GitHub org to monitor commits, releases, and PRs automatically."},{"@type":"HowToStep","name":"Configure Content Templates","text":"Set your tone, format, and target channels — LinkedIn, Twitter, newsletter."},{"@type":"HowToStep","name":"Review and Publish","text":"Every draft lands in your queue for review. Nothing ships without your approval."}]})}</script>
-    <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"Organization","name":"Pressroom HQ","description":"AI-Powered Content Operations for Developer Teams","url":"https://pressroomhq.com","sameAs":["https://github.com/pressroomhq","https://linkedin.com/company/pressroomhq"]})}</script>
-    <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"SoftwareApplication","name":"Pressroom HQ","applicationCategory":"DeveloperApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0"}})}</script>
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How Pressroom HQ Works",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Connect GitHub",
+          "text": "Link your GitHub org to monitor commits, releases, and PRs automatically."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Configure Content Templates",
+          "text": "Set your tone, format, and target channels — LinkedIn, Twitter, newsletter."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Review and Publish",
+          "text": "Every draft lands in your queue for review. Nothing ships without your approval."
+        }
+      ]
+    })} />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Pressroom HQ",
+      "description": "AI content ops platform for developer tools companies",
+      "url": "https://pressroomhq.com",
+      "sameAs": [
+        "https://linkedin.com/company/pressroomhq",
+        "https://github.com/pressroomhq"
+      ],
+      "founder": {
+        "@type": "Person",
+        "name": "Pressroom HQ Founder",
+        "url": "https://pressroomhq.com/about"
+      }
+    })} />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Pressroom HQ",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0"
+      }
+    })} />
   </head>
   <header>
     <nav class="border-b border-neutral-800 px-6 py-3" aria-label="Main navigation">
